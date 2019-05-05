@@ -29,7 +29,8 @@ import pdb
 from datetime import datetime
 import matplotlib.pyplot as plt
 
-def prime_seive(n):
+def prime_seive(n, possible_primes=None):
+	#returns all primes <= n
 	possible_primes = np.arange(n) + 1
 	i = 1
 	x = -1
@@ -39,7 +40,8 @@ def prime_seive(n):
 			np.logical_or(possible_primes/x % 1 != 0,possible_primes == x)
 		possible_primes = possible_primes[ind]
 		i += 1
-	return possible_primes
+	#need to boot 1 from primes list
+	return possible_primes[1:]
 
 # t = []
 # for i in range(1,11):
