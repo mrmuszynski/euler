@@ -1,6 +1,6 @@
 #! /usr/bin/env python3
 # H+
-#	Title   : euler24.py
+#	Title   : euler15.py
 #	Author  : Matt Muszynski
 #	Date    : 4/22/17
 #	Synopsis: 
@@ -24,14 +24,40 @@
 # D-
 ###############################################################################
 
-import numpy as np
+from numpy import load, array, vstack, linspace, zeros
+from math import factorial
+from itertools import permutations
+from datetime import datetime
+from copy import copy
+start_time = datetime.now()
 import pdb
 
-numbers = ['0','1','2','3','4','5','6','7','8','9']
-unused_numbers = numbers
-used_numbers = []
+factorials = array([factorial(x) for x in linspace(9,0,10)])
+print factorials
+coeffs = zeros(10)
+for jj in range(len(coeffs)):
+	ii = 0
+	while sum(coeffs*factorials) + ii*factorials[jj] < 1000000:
+		ii += 1
+	coeffs[jj] = ii-1
+	print(coeffs[jj])
+pdb.set_trace()
 
 
-for 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
