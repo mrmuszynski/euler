@@ -32,7 +32,7 @@ from math import factorial
 start_time = datetime.now()
 import pdb
 
-for number in arange(100000000):
+for number in arange(100000):
 	factorials = [factorial(int(x)) for x in str(number)]
 	if sum(factorials) == number:
 		print(number)
